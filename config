@@ -1,17 +1,12 @@
 # i3 config file (v4)
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
-#
-# This config file uses keycodes (bindsym) and was written for the QWERTY
-# layout.
-#
-# To get a config file with the same key positions, but for your current
-# layout, use the i3-config-wizard
-#
-
-# Font for window titles. Will also be used by the bar unless a different font
-# is used in the bar {} block below. ISO 10646 = Unicode
+#Interface-----------------
 font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
+
+#Border only, no titlebar
+new_window pixel 1
+
 # The font above is very space-efficient, that is, it looks good, sharp and
 # clear in small sizes. However, if you need a lot of unicode glyphs or
 # right-to-left text rendering, you should instead use pango for rendering and
@@ -160,7 +155,7 @@ exec_always /usr/share/gnome-settings-daemon
 bar {
     
 
-    status_command i3status
+    status_command i3status --config ~/.config/i3/.i3status.conf
     position top
         colors {
               background #002b36
