@@ -157,7 +157,7 @@ exec_always /usr/bin/gnome-settings-daemon
 bar {
     status_command i3status --config ~/.config/i3/.i3status.conf
     position top
-    font pango: Droid Sans 8
+    font pango: Droid Sans 9
         colors {
               background #002b36
               statusline #657b83
