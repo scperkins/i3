@@ -1,17 +1,19 @@
 # i3 config file (v4)
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
-#Interface-----------------
-font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 
+#INTERFACE----------------------------------------------------------- 
+font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 #Border only, no titlebar
-new_window pixel 1
+#new_window pixel 1
 
 # The font above is very space-efficient, that is, it looks good, sharp and
 # clear in small sizes. However, if you need a lot of unicode glyphs or
 # right-to-left text rendering, you should instead use pango for rendering and
 # chose a FreeType font, such as:
-# font pango:DejaVu Sans Mono 10
+#font pango:DejaVu Sans Mono 10
+
+#KEYBINDINGS----------------------------------------------------------
 
 # use Mouse+Mod1 to drag floating windows to their wanted position
 floating_modifier Mod1
@@ -145,18 +147,17 @@ bindsym Mod1+r mode "resize"
 # in ~/.i3/config.
 #
 
-
+#SET WALLPAPER-----------------------------------------------------------------------
 #Set wallpaper
 exec_always --no-startup-id feh --bg-scale /home/sean/Pictures/Wallpapers/OqsoGra.jpg
 
-#gnome settings
-exec_always /usr/share/gnome-settings-daemon
+#START GNOME-SETTINGS-DAEMON--------------------------------------------------------- 
+exec_always /usr/bin/gnome-settings-daemon
 
 bar {
-    
-
     status_command i3status --config ~/.config/i3/.i3status.conf
     position top
+    font pango: Droid Sans 8
         colors {
               background #002b36
               statusline #657b83
@@ -166,5 +167,7 @@ bar {
               inactive_workspace #073642 #002b36 #839496
               urgent_workspace   #dc322f #dc322f #fdf6e3
    }
+
 }
+
 
