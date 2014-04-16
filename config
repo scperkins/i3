@@ -6,7 +6,7 @@
 #font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 font -*-termsynu-medium-r-*-14-*-*-*-*-*-*-*
 #Border only, no titlebar
-new_window normal 0 px
+new_window pixel 0
 
 # The font above is very space-efficient, that is, it looks good, sharp and
 # clear in small sizes. However, if you need a lot of unicode glyphs or
@@ -127,6 +127,12 @@ bindsym Mod4+Shift+c reload
 bindsym Mod4+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym Mod4+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+
+# Lock the screen
+bindsym Control+Mod4+l exec /bin/lock
+# execute automatically after inacitivity
+exec xautolock -time 10 -locker 'i3lock /bin/lock'
+#wait
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
