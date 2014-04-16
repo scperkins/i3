@@ -6,7 +6,7 @@
 #font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 font -*-termsynu-medium-r-*-14-*-*-*-*-*-*-*
 #Border only, no titlebar
-new_window pixel 1
+new_window normal 0 px
 
 # The font above is very space-efficient, that is, it looks good, sharp and
 # clear in small sizes. However, if you need a lot of unicode glyphs or
@@ -93,6 +93,8 @@ bindsym Mod4+7 workspace 7
 bindsym Mod4+8 workspace 8
 bindsym Mod4+9 workspace 9
 bindsym Mod4+0 workspace 10
+bindsym Mod4+period workspace next
+bindsym Mod4+comma workspace prev
 
 # move focused container to workspace
 bindsym Mod4+Shift+1 move container to workspace 1
@@ -105,6 +107,8 @@ bindsym Mod4+Shift+7 move container to workspace 7
 bindsym Mod4+Shift+8 move container to workspace 8
 bindsym Mod4+Shift+9 move container to workspace 9
 bindsym Mod4+Shift+0 move container to workspace 10
+bindsym $mod+Shift+period move container to workspace next
+bindsym $mod+Shift+comma move container to workspace prev
 
 # Move the current workspace to the next output
 # (effectively toggles when you only have two outputs)
@@ -161,7 +165,7 @@ bindsym Mod4+r mode "resize"
 
 #SET WALLPAPER-----------------------------------------------------------------------
 #Set wallpaper
-exec_always --no-startup-id feh --bg-scale /home/sean/Pictures/Wallpapers/city_tilt.jpgr
+exec_always --no-startup-id feh --bg-scale /home/sean/Pictures/Wallpapers/city_tilt.jpg
 
 #START GNOME-SETTINGS-DAEMON--------------------------------------------------------- 
 exec_always /usr/bin/gnome-settings-daemon
