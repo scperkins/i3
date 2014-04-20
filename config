@@ -4,7 +4,7 @@
 
 #INTERFACE----------------------------------------------------------- 
 #font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
-font -*-termsynu-medium-r-*-14-*-*-*-*-*-*-*
+#font -*-termsyn-medium-r-*-14-*-*-*-*-*-*-*
 #Border only, no titlebar
 new_window pixel 0
 
@@ -12,7 +12,16 @@ new_window pixel 0
 # clear in small sizes. However, if you need a lot of unicode glyphs or
 # right-to-left text rendering, you should instead use pango for rendering and
 # chose a FreeType font, such as:
-#font pango:DejaVu Sans Mono 10
+font pango:Droid Sans 8
+
+set $blue #268bd2
+
+# class                 border  backgr. text    indicator
+client.focused          #4c7899 $blue #ffffff #2e9ef4
+client.focused_inactive #333333 #5f676a #ffffff #484e50
+client.unfocused        #333333 #222222 #888888 #292d2e
+client.urgent           #2f343a #900000 #ffffff #900000
+
 
 #KEYBINDINGS----------------------------------------------------------
 
@@ -20,7 +29,7 @@ new_window pixel 0
 floating_modifier Mod4
 
 # start a terminal
-bindsym Mod4+Return exec i3-sensible-terminal
+bindsym Mod4+Return exec urxvt
 
 # kill focused window
 bindsym Mod4+Shift+q kill
@@ -131,8 +140,8 @@ bindsym Mod4+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 # Lock the screen
 bindsym Control+Mod4+l exec /bin/lock
 # execute automatically after inacitivity
-exec xautolock -time 10 -locker 'i3lock /bin/lock'
-#wait
+exec "xautolock -time 5 -locker '/bin/lock'"
+
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
