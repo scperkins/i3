@@ -14,16 +14,25 @@ new_window pixel 0
 # chose a FreeType font, such as:
 font pango:Droid Sans 8
 
+# WINDOW TITLES------------------------------------------------------
+
 set $blue #268bd2
+set $yellow #b58900
+set $orange #cb4b16
+set $red #dc322f
+set $magenta #d33682
+set $violet #6c71c4 
+set $cyan #2aa198
+set $green #859900  
 
 # class                 border  backgr. text    indicator
-client.focused          #4c7899 $blue #ffffff #2e9ef4
-client.focused_inactive #333333 #5f676a #ffffff #484e50
-client.unfocused        #333333 #222222 #888888 #292d2e
-client.urgent           #2f343a #900000 #ffffff #900000
+client.focused          #4c7899 $blue   #ffffff #2e9ef4
+client.focused_inactive #333333 $violet #ffffff #484e50
+client.unfocused        #333333 #002b36 #888888 #292d2e
+client.urgent           #2f343a $red    #ffffff #900000
 
 
-#KEYBINDINGS----------------------------------------------------------
+# KEYBINDINGS----------------------------------------------------------
 
 # use Mouse+Mod4 to drag floating windows to their wanted position
 floating_modifier Mod4
