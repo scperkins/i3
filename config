@@ -5,8 +5,9 @@
 #INTERFACE----------------------------------------------------------- 
 #font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 #font -*-termsyn-medium-r-*-14-*-*-*-*-*-*-*
+
 #Border only, no titlebar
-new_window pixel 0
+new_window pixel 0 
 
 # The font above is very space-efficient, that is, it looks good, sharp and
 # clear in small sizes. However, if you need a lot of unicode glyphs or
@@ -16,20 +17,20 @@ font pango:Droid Sans 8
 
 # WINDOW TITLES------------------------------------------------------
 
-set $blue #268bd2
+set $blue #8fa1b3
 set $yellow #b58900
 set $orange #cb4b16
-set $red #dc322f
+set $red #bf616a
 set $magenta #d33682
-set $violet #6c71c4 
+set $violet #b48ead 
 set $cyan #2aa198
 set $green #859900  
 
 # class                 border  backgr. text    indicator
-client.focused          #4c7899 $blue   #ffffff #2e9ef4
-client.focused_inactive #333333 $violet #ffffff #484e50
-client.unfocused        #333333 #002b36 #888888 #292d2e
-client.urgent           #2f343a $red    #ffffff #900000
+client.focused          #4c7899 $blue   #eff1f5 #2e9ef4
+client.focused_inactive #333333 $violet #eff1f5 #484e50
+client.unfocused        #333333 #2b303b #888888 #292d2e
+client.urgent           #2f343a $red    #eff1f5 #900000
 
 
 # KEYBINDINGS----------------------------------------------------------
@@ -125,8 +126,8 @@ bindsym Mod4+Shift+7 move container to workspace 7
 bindsym Mod4+Shift+8 move container to workspace 8
 bindsym Mod4+Shift+9 move container to workspace 9
 bindsym Mod4+Shift+0 move container to workspace 10
-bindsym $mod+Shift+period move container to workspace next
-bindsym $mod+Shift+comma move container to workspace prev
+bindsym Mod4+Shift+period move container to workspace next
+bindsym Mod4+Shift+comma move container to workspace prev
 
 # Move the current workspace to the next output
 # (effectively toggles when you only have two outputs)
@@ -199,12 +200,13 @@ bar {
     position top
     font pango: Droid Sans 9
         colors {
-              background #002b36
-              statusline #657b83
-              separator  #586e75
-              focused_workspace  #b58900 #b58900 #002b36
-              active_workspace   #586e75 #586e75 #002b36
-              inactive_workspace #073642 #002b36 #839496
+              background #2b303b
+              statusline #65737e
+              separator  #303030
+              
+              focused_workspace  #ebcb8b #ebcb8b #303030
+              active_workspace   #303030 #303030 #303030
+              inactive_workspace #073642 #303030 #65737e
               urgent_workspace   #dc322f #dc322f #fdf6e3
    }
 
