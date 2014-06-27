@@ -150,7 +150,7 @@ bindsym Mod4+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 # Lock the screen
 bindsym Control+Mod4+l exec /bin/lock
 # execute automatically after inacitivity
-exec "xautolock -time 5 -locker '/bin/lock'"
+# exec "xautolock -time 60 -locker '/bin/lock'"
 
 
 # resize window (you can also use the mouse for that)
@@ -190,26 +190,25 @@ bindsym Mod4+r mode "resize"
 
 #SET WALLPAPER-----------------------------------------------------------------------
 #Set wallpaper
-exec_always --no-startup-id feh --bg-scale /home/sean/Pictures/Wallpapers/city_tilt.jpg
+exec_always --no-startup-id feh --bg-scale /home/sean/Pictures/Wallpapers/ChromeOSWallpapers/tokyo_smog_high_res.jpg
 
 #START GNOME-SETTINGS-DAEMON--------------------------------------------------------- 
 exec_always /usr/bin/gnome-settings-daemon
 
+#solarized
 bar {
     status_command i3status --config ~/.config/i3/.i3status.conf
     position top
     font pango: Droid Sans 9
         colors {
-              background #2b303b
-              statusline #65737e
-              separator  #303030
-              
-              focused_workspace  #ebcb8b #ebcb8b #303030
-              active_workspace   #303030 #303030 #303030
-              inactive_workspace #073642 #303030 #65737e
+              background #002b36
+              statusline #657b83
+              separator  #586e75
+              focused_workspace  #b58900 #b58900 #002b36
+              active_workspace   #586e75 #586e75 #002b36
+              inactive_workspace #073642 #002b36 #505050
               urgent_workspace   #dc322f #dc322f #fdf6e3
    }
 
 }
-
 
